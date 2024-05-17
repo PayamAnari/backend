@@ -23,3 +23,21 @@ class CustomUserManager(UserManager):
         extra_fields.setdefault("is_staff", True)
         extra_fields.setdefault("is_superuser", True)
         return self._create_user(name, email, password, **extra_fields)
+
+
+class User(AbstractUser, PermissionsMixin):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    email = models.EmailField(unique=True)
+    name = models.CharField(max_length=255, blank=True, null=True)
+    avatar = models.ImageField(upload_to="uploads/avatars")
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
+    is_superuser = models.BooleanField(default=False)
+
+    objects = CustomUserManager()
+
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = ["name"]
+
+    def __str__(self):
+        return self.email
