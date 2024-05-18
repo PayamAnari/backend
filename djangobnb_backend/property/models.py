@@ -24,5 +24,5 @@ class Property(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 
-def image_rul(self):
+def image_url(self):
     return f"{settings.WEBSITE_URL}{self.image.url}"
