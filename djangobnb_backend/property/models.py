@@ -22,3 +22,7 @@ class Property(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+
+def image_rul(self):
+    return f"{settings.WEBSITE_URL}{self.image.url}"
