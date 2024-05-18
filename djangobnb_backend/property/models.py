@@ -15,7 +15,7 @@ class Property(models.Model):
     country = models.CharField(max_length=225)
     country_code = models.CharField(max_length=10)
     category_code = models.CharField(max_length=10)
-    image = models.ImageField(max_length=255)
+    image = models.ImageField(upload_to="uploads/properties")
     address = models.TextField()
     landlord = models.ForeignKey(
         User, related_name="properties", on_delete=models.CASCADE
