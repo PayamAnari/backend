@@ -9,5 +9,5 @@ class PropertiesListSerializer(serializers.ModelSerializer):
             "id",
             "title",
             "price_per_night",
-            "image",
+            "image_url",
         )
