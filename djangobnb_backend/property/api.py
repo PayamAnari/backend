@@ -4,6 +4,7 @@ from rest_framework.decorators import (
     permission_classes,
     authentication_classes,
 )
+
 from .models import Property
 from .serializers import PropertiesListSerializer
 

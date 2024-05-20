@@ -25,12 +25,12 @@ WEBSITE_URL = "http://localhost:8000"
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
     "ROTATE_REFRESH_TOKENS": False,
     "BLACKLIST_AFTER_ROTATION": False,
     "UPDATE_LAST_LOGIN": True,
-    "SIGNING_KEY": "acomplexkey",
     "ALGORITHM": "HS512",
+    "SIGNING_KEY": "acomplexkey",
 }
 
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
@@ -38,6 +38,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_VERIFICATION = None
+
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
@@ -55,7 +56,6 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 REST_AUTH = {"USE_JWT": True, "JWT_AUTH_HTTPONLY": False}
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -65,6 +65,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "useraccount",
+    "property",
     "rest_framework",
     "rest_framework.authtoken",
     "rest_framework_simplejwt",
@@ -73,8 +75,6 @@ INSTALLED_APPS = [
     "dj_rest_auth",
     "dj_rest_auth.registration",
     "corsheaders",
-    "useraccount",
-    "property",
 ]
 
 MIDDLEWARE = [
