@@ -27,4 +27,7 @@ def create_property(request):
         property.landloard = request.user
         property.save()
 
-        return JsonResponse({"data": "Property created successfully"})
+        return JsonResponse({"success": True})
+    else:
+        print("error", form.errors, form.non_field_errors)
+        return JsonResponse({"errors": form.errors.as_json()}, status=400)
