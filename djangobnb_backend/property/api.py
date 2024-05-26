@@ -5,6 +5,7 @@ from rest_framework.decorators import (
     authentication_classes,
 )
 
+from .forms import PropertyForm
 from .models import Property
 from .serializers import PropertiesListSerializer
 
@@ -16,3 +17,14 @@ def properties_list(request):
     properties = Property.objects.all()
     serializer = PropertiesListSerializer(properties, many=True)
     return JsonResponse({"data": serializer.data})
+
+
+@api_view(["POST", "FILES"])
+def create_property(request):
+    form = PropertyForm(request.POST, request.FILES)
+    if form.is_valid():
+        property = form.save(commit=False)
+        property.landloard = request.user
+        property.save()
+
+        return JsonResponse({"data": "Property created successfully"})
