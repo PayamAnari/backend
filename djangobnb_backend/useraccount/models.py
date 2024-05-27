@@ -46,3 +46,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = [
         "name",
     ]
+
+    def avatar_url(self):
+        return f"{settings.WEBSITE_URL}{self.avatar.url}"
