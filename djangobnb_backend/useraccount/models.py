@@ -48,4 +48,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     ]
 
     def avatar_url(self):
-        return f"{settings.WEBSITE_URL}{self.avatar.url}"
+        if self.avatar:
+            return f"{settings.WEBSITE_URL}{self.avatar.url}"
+        else:
+            return f"{settings.WEBSITE_URL}/static/public/avatar.png"
