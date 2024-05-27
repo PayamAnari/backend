@@ -47,7 +47,11 @@ def create_property(request):
 @api_view(["POST"])
 def book_property(request, pk):
     try:
-        pass
+        start_date = request.POST.get("start_date", "")
+        end_date = request.POST.get("end_date", "")
+        number_of_nights = request.POST.get("number_of_nights", "")
+        total_price = request.POST.get("total_price", "")
+        quests = request.POST.get("guests", "")
 
     except Exception as e:
         print("error", e)
