@@ -7,7 +7,7 @@ from rest_framework.decorators import (
 
 
 from .forms import PropertyForm
-from .models import Property
+from .models import Property, Reservation
 from .serializers import PropertiesListSerializer, PropertiesDetailSerializer
 
 
@@ -51,7 +51,19 @@ def book_property(request, pk):
         end_date = request.POST.get("end_date", "")
         number_of_nights = request.POST.get("number_of_nights", "")
         total_price = request.POST.get("total_price", "")
-        quests = request.POST.get("guests", "")
+        guests = request.POST.get("guests", "")
+
+        property = Property.objects.get("pk=pk")
+
+        Reservation.objects.create(
+            property=property,
+            start_date=start_date,
+            end_date=end_date,
+            number_of_nights=number_of_nights,
+            total_price=total_price,
+            guests=guests,
+            created_by=request.user,
+        )
 
     except Exception as e:
         print("error", e)
