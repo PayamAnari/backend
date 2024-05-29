@@ -39,6 +39,10 @@ def properties_detail(request, pk):
 @permission_classes([])
 def property_reservation(request, pk):
     property = Property.objects.get(pk=pk)
+    reservations = property.reservations.all()
+    serializer = ReservationListSerializer(reservations, many=True)
+
+    return JsonResponse(serializer.data)
 
 
 @api_view(["POST", "FILES"])
