@@ -53,7 +53,7 @@ def book_property(request, pk):
         total_price = request.POST.get("total_price", "")
         guests = request.POST.get("guests", "")
 
-        property = Property.objects.get("pk=pk")
+        property = Property.objects.get(pk=pk)
 
         Reservation.objects.create(
             property=property,
@@ -64,6 +64,8 @@ def book_property(request, pk):
             guests=guests,
             created_by=request.user,
         )
+
+        return JsonResponse({"success": True})
 
     except Exception as e:
         print("error", e)
