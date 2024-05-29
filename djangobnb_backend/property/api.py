@@ -37,12 +37,12 @@ def properties_detail(request, pk):
 @api_view(["GET"])
 @authentication_classes([])
 @permission_classes([])
-def property_reservation(request, pk):
+def property_reservations(request, pk):
     property = Property.objects.get(pk=pk)
-    reservations = property.reservations.all()
+    reservations = property.reservation.all()
     serializer = ReservationListSerializer(reservations, many=True)
 
-    return JsonResponse(serializer.data)
+    return JsonResponse(serializer.data, safe=False)
 
 
 @api_view(["POST", "FILES"])
