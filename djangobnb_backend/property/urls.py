@@ -10,6 +10,6 @@ urlpatterns = [
     path(
         "<uuid:pk>/reservations/",
         api.property_reservation,
-        name="property_reservations",
+        name="api_property_reservations",
     ),
 ]
