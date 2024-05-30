@@ -6,6 +6,7 @@ from rest_framework.decorators import (
     permission_classes,
 )
 from django.http import JsonResponse
+from property.serializers import ReservationListSerializer
 
 
 @api_view(["GET"])
@@ -16,3 +17,11 @@ def landlord_detail(request, pk):
     serializer = UserDetailSerializer(user, many=False)
 
     return JsonResponse(serializer.data, safe=False)
+
+
+@api_view(["GET"])
+def reservations_list(request):
+    reservations = request.user.reservation.all()
+    serializers = ReservationListSerializer(reservations, many=True)
+
+    return JsonResponse(serializers.data, safe=False)
