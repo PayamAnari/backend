@@ -22,8 +22,6 @@ def landlord_detail(request, pk):
 @api_view(["GET"])
 def reservations_list(request):
     reservations = request.user.reservation.all()
-    print("user", request.user)
-    print(reservations)
     serializers = ReservationListSerializer(reservations, many=True)
 
     return JsonResponse(serializers.data, safe=False)
