@@ -5,7 +5,7 @@ from rest_framework.decorators import (
     authentication_classes,
 )
 
-from rest_framework_simplejwt.token import AccessToken
+from rest_framework_simplejwt.tokens import AccessToken
 from .forms import PropertyForm
 from .models import Property, Reservation
 from .serializers import (
@@ -24,7 +24,7 @@ def properties_list(request):
     try:
         token = request.META("HTTP_AUTHORIZATION").split("Bearer ")[1]
         token = AccessToken(token)
-        user_id = token.payload("user_id")
+        user_id = token.payload["user_id"]
         user = User.objects.get(pk=user_id)
 
     except Exception as e:
@@ -44,7 +44,7 @@ def properties_list(request):
                 favorites.append(property.id)
 
     serializer = PropertiesListSerializer(properties, many=True)
-    return JsonResponse({"data": serializer.data})
+    return JsonResponse({"data": serializer.data, "favorites": favorites})
 
 
 @api_view(["GET"])
@@ -118,9 +118,9 @@ def toggle_favorite(request, pk):
     if request.user in property.favorited.all():
         property.favorited.remove(request.user)
 
-        return JsonResponse({"is_favorite: False"})
+        return JsonResponse({"is_favorite": False})
     else:
 
         property.favorited.add(request.user)
 
-        return JsonResponse({"is_favorite: True"})
+        return JsonResponse({"is_favorite": True})
