@@ -5,7 +5,7 @@ from rest_framework.decorators import (
     authentication_classes,
 )
 
-
+from rest_framework_simplejwt.token import AccessToken
 from .forms import PropertyForm
 from .models import Property, Reservation
 from .serializers import (
@@ -13,12 +13,23 @@ from .serializers import (
     PropertiesDetailSerializer,
     ReservationListSerializer,
 )
+from useraccount.models import User
 
 
 @api_view(["GET"])
 @authentication_classes([])
 @permission_classes([])
 def properties_list(request):
+
+    try:
+        token = request.META("HTTP_AUTHORIZATION").split("Bearer ")[1]
+        token = AccessToken(token)
+        user_id = token.payload("user_id")
+        user = User.objects.get(pk=user_id)
+
+    except Exception as e:
+        user = None
+
     favorites = []
     properties = Property.objects.all()
 
