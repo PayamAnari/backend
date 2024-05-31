@@ -22,7 +22,7 @@ from useraccount.models import User
 def properties_list(request):
 
     try:
-        token = request.META("HTTP_AUTHORIZATION").split("Bearer ")[1]
+        token = request.META.get("HTTP_AUTHORIZATION").split("Bearer ")[1]
         token = AccessToken(token)
         user_id = token.payload["user_id"]
         user = User.objects.get(pk=user_id)
