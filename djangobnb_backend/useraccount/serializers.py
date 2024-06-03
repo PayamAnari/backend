@@ -20,3 +20,9 @@ class UserDetailSerializer(serializers.ModelSerializer):
             "last_login",
             "date_joined",
         )
+
+
+class ProfilePhotoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["avatar"]

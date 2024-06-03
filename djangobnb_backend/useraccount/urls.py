@@ -16,7 +16,7 @@ urlpatterns = [
     path("myreservations/", api.reservations_list, name="api_reservations_list"),
     path("<uuid:pk>/", api.landlord_detail, name="api_landlord_detail"),
     path("<uuid:pk>/profile/", api.update_landlord, name="api_update_landlord"),
-    path("upload-profile/", api.upload_profile, name="upload_profile"),
+    path("<uuid:pk>/upload-profile/", api.upload_profile, name="upload_profile"),
 ]
 
 if settings.DEBUG:
