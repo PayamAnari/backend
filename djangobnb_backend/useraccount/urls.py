@@ -1,4 +1,6 @@
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 from dj_rest_auth.jwt_auth import get_refresh_view
 from dj_rest_auth.registration.views import RegisterView
@@ -13,5 +15,9 @@ urlpatterns = [
     path("logout/", LogoutView.as_view(), name="rest_logout"),
     path("myreservations/", api.reservations_list, name="api_reservations_list"),
     path("<uuid:pk>/", api.landlord_detail, name="api_landlord_detail"),
-    path("<uuid:pk>/profile", api.landlord_detail, name="api_landlord_detail"),
+    path("<uuid:pk>/profile/", api.update_landlord, name="api_update_landlord"),
+    path("upload-profile/", api.upload_profile, name="upload_profile"),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
