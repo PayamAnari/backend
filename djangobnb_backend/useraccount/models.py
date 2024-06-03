@@ -34,6 +34,10 @@ class User(AbstractBaseUser, PermissionsMixin):
     avatar = models.ImageField(upload_to="uploads/avatars/")
     telephone = models.CharField(max_length=20, blank=True, null=True)
     address = models.TextField(max_length=225, blank=True, null=True)
+    birthday = models.DateField(blank=True, null=True)
+    work = models.CharField(max_length=255, blank=True, null=True)
+    about_me = models.TextField(blank=True, null=True)
+    favorite_song = models.CharField(max_length=255, blank=True, null=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     date_joined = models.DateTimeField(auto_now_add=True)
@@ -51,4 +55,4 @@ class User(AbstractBaseUser, PermissionsMixin):
         if self.avatar:
             return f"{settings.WEBSITE_URL}{self.avatar.url}"
         else:
-            return f"{settings.WEBSITE_URL}/media/uploads/avatar.png"
+            return f"{settings.WEBSITE_URL}/media/uploads/user.png"

@@ -10,4 +10,13 @@ class UserDetailSerializer(serializers.ModelSerializer):
             "id",
             "name",
             "avatar_url",
+            "email",
+            "telephone",
+            "work",
+            "favorite_song",
+            "birthday",
+            "about_me",
+            "address",
+            "last_login",
+            "date_joined",
         )
