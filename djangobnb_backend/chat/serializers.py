@@ -8,4 +8,4 @@ class ConversationListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Conversation
-        fields = ("id", "users", "created_at", "modified_at")
+        fields = ("id", "users", "modified_at")
