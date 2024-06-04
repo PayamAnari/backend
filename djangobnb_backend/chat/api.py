@@ -8,4 +8,4 @@ from .serializers import ConversationListSerializer
 @api_view(["GET"])
 def conversation_list(request):
     serializer = ConversationListSerializer(request.user.conversations.all(), many=True)
-    return JsonResponse(serializer.data, safe=False)
+    return JsonResponse(serializer.data)
