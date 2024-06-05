@@ -24,6 +24,7 @@ SITE_ID = 1
 
 WEBSITE_URL = "http://localhost:8000"
 
+CHANNEL_LAYERS = {"default": {"BACKEND": "channels.layers.InMemoryChannelLayer"}}
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
@@ -61,6 +62,7 @@ REST_AUTH = {"USE_JWT": True, "JWT_AUTH_HTTPONLY": False}
 # Application definition
 
 INSTALLED_APPS = [
+    "daphne",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -110,7 +112,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "djangobnb_backend.wsgi.application"
-
+ASGI_APPLICATION = "djangobnb_backend.asgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
