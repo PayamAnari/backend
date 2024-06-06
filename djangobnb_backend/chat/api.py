@@ -21,7 +21,7 @@ def conversations_detail(request, pk):
 
     conversation_serializer = ConversationDetailSerializer(conversation, many=False)
     messages_serializer = ConversationMessageSerializer(
-        conversation.message.all(), many=True
+        conversation.messages.all(), many=True
     )
 
     return JsonResponse(
