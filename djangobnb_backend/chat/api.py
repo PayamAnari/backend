@@ -12,7 +12,7 @@ def conversations_list(request):
 
 
 @api_view(["GET"])
-def conversation_detail(request, pk):
+def conversations_detail(request, pk):
     conversation = request.user.conversations.get(pk=pk)
 
     conversation_serializer = ConversationDetailSerializer(conversation, many=False)
