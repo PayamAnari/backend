@@ -55,6 +55,8 @@ def properties_list(request):
         for reservation in exact_matches | overlap_matches:
             all_matches.append(reservation.property_id)
 
+        properties = properties.exclude(id__in=all_matches)
+
     if landlord_id:
         properties = properties.filter(landlord_id=landlord_id)
 
