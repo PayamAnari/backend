@@ -43,6 +43,11 @@ def properties_list(request):
     bathrooms = request.GET.get("numBathrooms", "")
     guests = request.GET.get("numGuests", "")
 
+    if checkin_date and checkout_date:
+        exact_matches = Reservation.objects.filter(
+            start_date=checkin_date
+        ) | Reservation.objects.filter(end_date=checkout_date)
+
     if landlord_id:
         properties = properties.filter(landlord_id=landlord_id)
 
@@ -57,6 +62,12 @@ def properties_list(request):
 
     if bathrooms:
         properties = properties.filter(bathrooms__gte=bathrooms)
+
+    if country:
+        properties = properties.filter(country=country)
+
+    if category and category != "undefined":
+        properties = properties.filter(category=category)
 
     if user:
         for property in properties:
