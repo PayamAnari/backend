@@ -49,6 +49,15 @@ def properties_list(request):
     if is_favorites:
         properties = properties.filter(favorited__in=[user])
 
+    if guests:
+        properties = properties.filter(guests__gte=guests)
+
+    if bedrooms:
+        properties = properties.filter(bedrooms__gte=bedrooms)
+
+    if bathrooms:
+        properties = properties.filter(bathrooms__gte=bathrooms)
+
     if user:
         for property in properties:
             if user in property.favorited.all():
