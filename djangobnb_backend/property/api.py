@@ -39,6 +39,9 @@ def properties_list(request):
     category = request.GET.get("category", "")
     checkin_date = request.GET.get("checkIn", "")
     checkout_date = request.GET.get("checkOut", "")
+    bedrooms = request.GET.get("numBedrooms", "")
+    bathrooms = request.GET.get("numBathrooms", "")
+    guests = request.GET.get("numGuests", "")
 
     if landlord_id:
         properties = properties.filter(landlord_id=landlord_id)
