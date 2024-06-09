@@ -47,6 +47,13 @@ def properties_list(request):
         exact_matches = Reservation.objects.filter(
             start_date=checkin_date
         ) | Reservation.objects.filter(end_date=checkout_date)
+        overlap_matches = Reservation.objects.filter(
+            start_date__lte=checkout_date, end_date__gte=checkin_date
+        )
+        all_matches = []
+
+        for reservation in exact_matches | overlap_matches:
+            all_matches.append(reservation.property_id)
 
     if landlord_id:
         properties = properties.filter(landlord_id=landlord_id)
