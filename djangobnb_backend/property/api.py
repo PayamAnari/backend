@@ -122,6 +122,23 @@ def create_property(request):
         return JsonResponse({"errors": form.errors.as_json()}, status=400)
 
 
+@api_view(["PUT"])
+@authentication_classes([])
+@permission_classes([])
+def update_property(request, pk):
+    try:
+        property = Property.objects.get(pk=pk)
+    except Property.DoesNotExist:
+        return JsonResponse({"errors": "Property not found"}, status=404)
+
+    form = PropertyForm(request.data, request.FILES, instance=property)
+    if form.is_valid():
+        form.save()
+        return JsonResponse({"success": True})
+    else:
+        return JsonResponse({"errors": form.errors.as_json()}, status=400)
+
+
 @api_view(["POST"])
 def book_property(request, pk):
     try:
