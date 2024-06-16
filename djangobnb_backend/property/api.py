@@ -139,6 +139,20 @@ def update_property(request, pk):
         return JsonResponse({"errors": form.errors.as_json()}, status=400)
 
 
+@api_view(["DELETE"])
+@authentication_classes([])
+@permission_classes([])
+def delete_property(request, pk):
+    try:
+        property = Property.objects.get(pk=pk)
+        property.delete()
+        return JsonResponse({"success": True})
+    except Property.DoesNotExist:
+        return JsonResponse({"errors": "Property not found"}, status=404)
+    except Exception as e:
+        return JsonResponse({"errors": str(e)}, status=400)
+
+
 @api_view(["POST"])
 def book_property(request, pk):
     try:
