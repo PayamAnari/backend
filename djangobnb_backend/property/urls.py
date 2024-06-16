@@ -13,5 +13,5 @@ urlpatterns = [
         name="api_property_reservations",
     ),
     path("<uuid:pk>/toggle_favorite/", api.toggle_favorite, name="api_toggle_favorite"),
-    path("<uuid:pk>/update/", api.update_property, name="api_update_property"),
+    path("<uuid:pk>/editproperty/", api.update_property, name="api_update_property"),
 ]
