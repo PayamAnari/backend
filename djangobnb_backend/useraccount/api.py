@@ -79,7 +79,7 @@ def update_landlord(request, pk):
 
 @api_view(["DELETE"])
 @permission_classes([IsAuthenticated])
-def update_landlord(request, pk):
+def delete_landlord(request, pk):
     try:
         user = User.objects.get(pk=pk)
     except User.DoesNotExist:

@@ -18,6 +18,7 @@ urlpatterns = [
     path("<uuid:pk>/", api.landlord_detail, name="api_landlord_detail"),
     path("<uuid:pk>/profile/", api.update_landlord, name="api_update_landlord"),
     path("<uuid:pk>/upload-profile/", api.upload_profile, name="upload_profile"),
+    path("<uuid:pk>/delete/", api.delete_landlord, name="delete_landlord"),
 ]
 
 if settings.DEBUG:
