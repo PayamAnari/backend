@@ -9,6 +9,7 @@ from django.http import JsonResponse
 from rest_framework import status
 from property.serializers import ReservationListSerializer
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 from django.conf import settings
 
 
@@ -59,11 +60,6 @@ def update_landlord(request, pk):
             {"error": "User not found"}, status=status.HTTP_404_NOT_FOUND
         )
 
-    if not request.user.is_authenticated:
-        return JsonResponse(
-            {"error": "User not authenticated"}, status=status.HTTP_401_UNAUTHORIZED
-        )
-
     if request.user.id != user.id:
         return JsonResponse(
             {"error": "You can only update your own profile"},
@@ -82,21 +78,9 @@ def update_landlord(request, pk):
 def delete_landlord(request, pk):
     try:
         user = User.objects.get(pk=pk)
+        user.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
     except User.DoesNotExist:
-        return JsonResponse(
-            {"error": "User not found"}, status=status.HTTP_404_NOT_FOUND
-        )
-
-    if not request.user.is_authenticated:
-        return JsonResponse(
-            {"error": "User not authenticated"}, status=status.HTTP_401_UNAUTHORIZED
-        )
-
-    if request.user.id != user.id:
-        return JsonResponse(
-            {"error": "You can only delete your own profile"},
-            status=status.HTTP_403_FORBIDDEN,
-        )
-
-    user.delete()
-    return JsonResponse({"message": "User deleted"}, status=status.HTTP_204_NO_CONTENT)
+        return Response({"error": "User not found"}, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
