@@ -59,13 +59,11 @@ def update_landlord(request, pk):
             {"error": "User not found"}, status=status.HTTP_404_NOT_FOUND
         )
 
-    # Ensure that request.user is authenticated
     if not request.user.is_authenticated:
         return JsonResponse(
             {"error": "User not authenticated"}, status=status.HTTP_401_UNAUTHORIZED
         )
 
-    # Compare user IDs
     if request.user.id != user.id:
         return JsonResponse(
             {"error": "You can only update your own profile"},
@@ -77,3 +75,28 @@ def update_landlord(request, pk):
         serializer.save()
         return JsonResponse(serializer.data)
     return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(["DELETE"])
+@permission_classes([IsAuthenticated])
+def update_landlord(request, pk):
+    try:
+        user = User.objects.get(pk=pk)
+    except User.DoesNotExist:
+        return JsonResponse(
+            {"error": "User not found"}, status=status.HTTP_404_NOT_FOUND
+        )
+
+    if not request.user.is_authenticated:
+        return JsonResponse(
+            {"error": "User not authenticated"}, status=status.HTTP_401_UNAUTHORIZED
+        )
+
+    if request.user.id != user.id:
+        return JsonResponse(
+            {"error": "You can only delete your own profile"},
+            status=status.HTTP_403_FORBIDDEN,
+        )
+
+    user.delete()
+    return JsonResponse({"message": "User deleted"}, status=status.HTTP_204_NO_CONTENT)
