@@ -145,12 +145,14 @@ def update_property(request, pk):
 def delete_property(request, pk):
     try:
         property = Property.objects.get(pk=pk)
-        property.delete()
-        return JsonResponse({"success": True})
     except Property.DoesNotExist:
-        return JsonResponse({"errors": "Property not found"}, status=404)
-    except Exception as e:
-        return JsonResponse({"errors": str(e)}, status=400)
+        return JsonResponse(status=404)
+
+    if request.method == "DELETE":
+        property.delete()
+        return JsonResponse({"success": True}, status=200)
+    else:
+        return JsonResponse(status=400)
 
 
 @api_view(["POST"])
