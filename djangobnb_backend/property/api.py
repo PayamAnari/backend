@@ -31,7 +31,7 @@ def properties_list(request):
         user = None
 
     favorites = []
-    properties = Property.objects.all()
+    properties = Property.objects.all().order_by("-created_at")
 
     is_favorites = request.GET.get("is_favorites", "")
     landlord_id = request.GET.get("landlord_id", "")
