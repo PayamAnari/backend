@@ -89,7 +89,7 @@ def properties_list(request):
     paginator = Paginator(properties, limit)
     paginated_properties = paginator.get_page(page)
 
-    serializer = PropertiesListSerializer(properties, many=True)
+    serializer = PropertiesListSerializer(paginated_properties, many=True)
     return JsonResponse(
         {
             "data": serializer.data,
