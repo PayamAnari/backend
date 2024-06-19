@@ -94,8 +94,7 @@ def properties_list(request):
         {
             "data": serializer.data,
             "favorites": favorites,
-            "total": paginator.count,
-            "num_pages": paginator.num_pages,
+            "totalPages": paginator.num_pages,
             "current_page": paginated_properties.number,
         }
     )
