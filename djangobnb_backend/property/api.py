@@ -4,6 +4,7 @@ from rest_framework.decorators import (
     permission_classes,
     authentication_classes,
 )
+from django.core.paginator import Paginator
 
 from rest_framework_simplejwt.tokens import AccessToken
 from .forms import PropertyForm
@@ -83,8 +84,21 @@ def properties_list(request):
             if user in property.favorited.all():
                 favorites.append(property.id)
 
+    page = request.GET.get("page", 1)
+    limit = request.GET.get("limit", 10)
+    paginator = Paginator(properties, limit)
+    paginated_properties = paginator.get_page(page)
+
     serializer = PropertiesListSerializer(properties, many=True)
-    return JsonResponse({"data": serializer.data, "favorites": favorites})
+    return JsonResponse(
+        {
+            "data": serializer.data,
+            "favorites": favorites,
+            "total": paginator.count,
+            "num_pages": paginator.num_pages,
+            "current_page": paginated_properties.number,
+        }
+    )
 
 
 @api_view(["GET"])
