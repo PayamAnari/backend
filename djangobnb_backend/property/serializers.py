@@ -5,10 +5,18 @@ from useraccount.serializers import UserDetailSerializer
 
 class PropertiesListSerializer(serializers.ModelSerializer):
     created_at = serializers.DateTimeField(read_only=True)
+    landlord = UserDetailSerializer(read_only=True, many=False)
 
     class Meta:
         model = Property
-        fields = ("id", "title", "price_per_night", "image_url", "created_at")
+        fields = (
+            "id",
+            "title",
+            "price_per_night",
+            "image_url",
+            "landlord",
+            "created_at",
+        )
 
 
 class PropertiesDetailSerializer(serializers.ModelSerializer):
