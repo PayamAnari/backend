@@ -121,6 +121,13 @@ def property_reservations(request, pk):
     return JsonResponse(serializer.data, safe=False)
 
 
+@api_view(["POST"])
+@authentication_classes([])
+@permission_classes([])
+def payment_intent(request):
+    return JsonResponse({"success": True})
+
+
 @api_view(["POST", "FILES"])
 def create_property(request):
     form = PropertyForm(request.POST, request.FILES)
