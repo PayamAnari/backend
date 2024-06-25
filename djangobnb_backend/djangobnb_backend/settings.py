@@ -59,6 +59,9 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 REST_AUTH = {"USE_JWT": True, "JWT_AUTH_HTTPONLY": False}
 
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
+STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")
+
 # Application definition
 
 INSTALLED_APPS = [

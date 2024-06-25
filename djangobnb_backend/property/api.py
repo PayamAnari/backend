@@ -15,6 +15,9 @@ from .serializers import (
     ReservationListSerializer,
 )
 from useraccount.models import User
+import stripe
+from django.conf import settings
+from django.views.decorators.csrf import csrf_exempt
 
 
 @api_view(["GET"])
@@ -121,17 +124,35 @@ def property_reservations(request, pk):
     return JsonResponse(serializer.data, safe=False)
 
 
+stripe.api_key = settings.STRIPE_SECRET_KEY
+
 
 @api_view(["GET"])
 @authentication_classes([])
 @permission_classes([])
+@csrf_exempt
 def payment_intent(request, pk):
     try:
         reservation = Reservation.objects.get(pk=pk)
-        serializer = ReservationListSerializer(reservation, many=False)
-        return JsonResponse({"success": True, "reservation": serializer.data})
+        amount = int(reservation.total_price * 100)
+
+        intent = stripe.PaymentIntent.create(
+            amount=amount,
+            currency="usd",
+            metadata={"reservation_id": reservation.id},
+        )
+
+        return JsonResponse(
+            {
+                "success": True,
+                "client_secret": intent["client_secret"],
+                "reservation": ReservationListSerializer(reservation).data,
+            }
+        )
     except Reservation.DoesNotExist:
         return JsonResponse({"error": "Reservation not found"}, status=404)
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
 
 
 @api_view(["POST", "FILES"])
