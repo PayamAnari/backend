@@ -1,4 +1,5 @@
 from .models import User
+from property.models import Reservation
 from .serializers import UserDetailSerializer, ProfilePhotoSerializer
 from rest_framework.decorators import (
     api_view,
@@ -29,6 +30,18 @@ def reservations_list(request):
     serializers = ReservationListSerializer(reservations, many=True)
 
     return JsonResponse(serializers.data, safe=False)
+
+
+@api_view(["GET"])
+def property_reservation_detail(request, pk):
+    try:
+        reservation = Reservation.objects.get(pk=pk)
+        serializer = ReservationListSerializer(reservation)
+        return JsonResponse(serializer.data)
+    except Reservation.DoesNotExist:
+        return JsonResponse(
+            {"error": "Reservation not found"}, status=status.HTTP_404_NOT_FOUND
+        )
 
 
 @api_view(["POST"])

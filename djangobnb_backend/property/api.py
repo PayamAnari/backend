@@ -121,11 +121,17 @@ def property_reservations(request, pk):
     return JsonResponse(serializer.data, safe=False)
 
 
-@api_view(["POST"])
+
+@api_view(["GET"])
 @authentication_classes([])
 @permission_classes([])
-def payment_intent(request):
-    return JsonResponse({"success": True})
+def payment_intent(request, pk):
+    try:
+        reservation = Reservation.objects.get(pk=pk)
+        serializer = ReservationListSerializer(reservation, many=False)
+        return JsonResponse({"success": True, "reservation": serializer.data})
+    except Reservation.DoesNotExist:
+        return JsonResponse({"error": "Reservation not found"}, status=404)
 
 
 @api_view(["POST", "FILES"])
