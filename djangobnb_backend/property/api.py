@@ -127,7 +127,7 @@ def property_reservations(request, pk):
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
-@api_view(["GET"])
+@api_view(["POST"])
 @authentication_classes([])
 @permission_classes([])
 @csrf_exempt
@@ -138,7 +138,7 @@ def payment_intent(request, pk):
 
         intent = stripe.PaymentIntent.create(
             amount=amount,
-            currency="usd",
+            currency="eur",
             metadata={"reservation_id": reservation.id},
         )
 
@@ -152,6 +152,7 @@ def payment_intent(request, pk):
     except Reservation.DoesNotExist:
         return JsonResponse({"error": "Reservation not found"}, status=404)
     except Exception as e:
+        print(f"Error creating Payment Intent: {str(e)}")
         return JsonResponse({"error": str(e)}, status=500)
 
 

@@ -55,12 +55,18 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
 ]
 
+CORS_ORIGIN_WHITELIST = [
+    "https://js.stripe.com",
+]
+
 CORS_ALLOW_ALL_ORIGINS = True
 
 REST_AUTH = {"USE_JWT": True, "JWT_AUTH_HTTPONLY": False}
 
-STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
-STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")
+STRIPE_SECRET_KEY = os.getenv(
+    "STRIPE_SECRET_KEY",
+    "sk_test_51NwVKYCQ1G0HK3wsRNxLlJhZEQWoVIqvbFLws0c9kzGCHea6eE9v9Jjfq4ewGPcR4iBR9arP8hs8A6VI8BVaNE5s004pO5CJaY",
+)
 
 # Application definition
 
@@ -95,7 +101,31 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.security.SecurityMiddleware",
+    "csp.middleware.CSPMiddleware",
 ]
+
+CSP_DEFAULT_SRC = ("'self'",)
+CSP_STYLE_SRC = ("'self'", "'unsafe-inline'")
+CSP_SCRIPT_SRC = (
+    "'self'",
+    "'unsafe-inline'",
+    "https://js.stripe.com",
+    "https://api.stripe.com",
+)
+CSP_IMG_SRC = ("'self'", "https://*.stripe.com")
+CSP_CONNECT_SRC = (
+    "'self'",
+    "https://api.stripe.com",
+    "https://merchant-ui-api.stripe.com",
+    "https://r.stripe.com",
+    "https://ppm.stripe.com",
+    "https://merchant-ui-api.stripe.com",
+)
+CSP_FONT_SRC = ("'self'", "https://fonts.gstatic.com")
+CSP_BASE_URI = ("'self'",)
+CSP_FORM_ACTION = ("'self'",)
+
 
 ROOT_URLCONF = "djangobnb_backend.urls"
 
