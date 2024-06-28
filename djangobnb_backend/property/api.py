@@ -124,6 +124,22 @@ def property_reservations(request, pk):
     return JsonResponse(serializer.data, safe=False)
 
 
+@api_view(["DELETE"])
+@authentication_classes([])
+@permission_classes([])
+def delete_reservation(request, pk):
+    try:
+        reservation = Reservation.objects.get(pk=pk)
+    except Reservation.DoesNotExist:
+        return JsonResponse(status=404)
+
+    if request.method == "DELETE":
+        reservation.delete()
+        return JsonResponse({"success": True}, status=200)
+    else:
+        return JsonResponse(status=400)
+
+
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
