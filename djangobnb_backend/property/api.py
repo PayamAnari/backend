@@ -144,28 +144,6 @@ def delete_reservation(request, pk):
         )
 
 
-# @api_view(["PATCH"])
-# @authentication_classes([])
-# @permission_classes([])
-# def update_reservation(request, pk):
-
-#     try:
-#         reservation = Reservation.objects.get(pk=pk)
-#     except Reservation.DoesNotExist:
-#         return JsonResponse(
-#             {"success": False, "message": "Reservation not found"}, status=404
-#         )
-
-#     if request.method == "PATCH":
-#         reservation.status = request.data.get("status", reservation.status)
-#         reservation.save()
-#         return JsonResponse({"success": True}, status=200)
-#     else:
-#         return JsonResponse(
-#             {"success": False, "message": "Invalid request method"}, status=400
-#         )
-
-
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 

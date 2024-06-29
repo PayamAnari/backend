@@ -16,6 +16,7 @@ class PropertiesListSerializer(serializers.ModelSerializer):
             "image_url",
             "landlord",
             "created_at",
+            "country",
         )
 
 
@@ -34,6 +35,7 @@ class PropertiesDetailSerializer(serializers.ModelSerializer):
             "bathrooms",
             "guests",
             "landlord",
+            "country",
         )
 
 
