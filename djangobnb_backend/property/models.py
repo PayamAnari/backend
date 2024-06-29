@@ -30,6 +30,12 @@ class Property(models.Model):
 
 
 class Reservation(models.Model):
+    STATUS_CHOICES = [
+        ("pending", "Pending"),
+        ("confirmed", "Confirmed"),
+        ("cancelled", "Cancelled"),
+    ]
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     property = models.ForeignKey(
         Property, related_name="reservation", on_delete=models.CASCADE
@@ -43,3 +49,4 @@ class Reservation(models.Model):
         User, related_name="reservation", on_delete=models.CASCADE
     )
     created_at = models.DateField(auto_now_add=True)
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default="pending")

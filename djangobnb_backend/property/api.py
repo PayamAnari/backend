@@ -131,13 +131,74 @@ def delete_reservation(request, pk):
     try:
         reservation = Reservation.objects.get(pk=pk)
     except Reservation.DoesNotExist:
-        return JsonResponse(status=404)
+        return JsonResponse(
+            {"success": False, "message": "Reservation not found"}, status=404
+        )
 
     if request.method == "DELETE":
         reservation.delete()
         return JsonResponse({"success": True}, status=200)
     else:
-        return JsonResponse(status=400)
+        return JsonResponse(
+            {"success": False, "message": "Invalid request method"}, status=400
+        )
+
+
+# @api_view(["PATCH"])
+# @authentication_classes([])
+# @permission_classes([])
+# def update_reservation(request, pk):
+
+#     try:
+#         reservation = Reservation.objects.get(pk=pk)
+#     except Reservation.DoesNotExist:
+#         return JsonResponse(
+#             {"success": False, "message": "Reservation not found"}, status=404
+#         )
+
+#     if request.method == "PATCH":
+#         reservation.status = request.data.get("status", reservation.status)
+#         reservation.save()
+#         return JsonResponse({"success": True}, status=200)
+#     else:
+#         return JsonResponse(
+#             {"success": False, "message": "Invalid request method"}, status=400
+#         )
+
+
+stripe.api_key = settings.STRIPE_SECRET_KEY
+
+
+@api_view(["POST"])
+@authentication_classes([])
+@permission_classes([])
+@csrf_exempt
+def confirm_payment(request, pk):
+    try:
+        reservation = Reservation.objects.get(pk=pk)
+        payment_intent_id = request.data.get("payment_intent_id")
+
+        intent = stripe.PaymentIntent.retrieve(payment_intent_id)
+
+        if intent.status == "succeeded":
+            reservation.status = "confirmed"
+            reservation.save()
+
+            return JsonResponse(
+                {
+                    "success": True,
+                    "reservation": ReservationListSerializer(reservation).data,
+                }
+            )
+        else:
+            return JsonResponse(
+                {"success": False, "message": "Payment not successful"}, status=400
+            )
+    except Reservation.DoesNotExist:
+        return JsonResponse({"error": "Reservation not found"}, status=404)
+    except Exception as e:
+        print(f"Error confirming Payment Intent: {str(e)}")
+        return JsonResponse({"error": str(e)}, status=500)
 
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
