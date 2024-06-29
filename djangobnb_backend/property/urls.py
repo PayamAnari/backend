@@ -18,6 +18,7 @@ urlpatterns = [
         name="api_delete_reservation",
     ),
     path("<uuid:pk>/payment/", api.payment_intent, name="api_payment_intent"),
+    path("<uuid:pk>/confirm_payment/", api.confirm_payment, name="api_confirm_payment"),
     path("<uuid:pk>/toggle_favorite/", api.toggle_favorite, name="api_toggle_favorite"),
     path("<uuid:pk>/editproperty/", api.update_property, name="api_update_property"),
     path("<uuid:pk>/delete", api.delete_property, name="delete_property"),
