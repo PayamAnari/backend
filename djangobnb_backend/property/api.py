@@ -225,7 +225,7 @@ def create_property(request):
         return JsonResponse({"errors": form.errors.as_json()}, status=400)
 
 
-@api_view(["PUT"])
+@api_view(["PATCH"])
 @authentication_classes([])
 @permission_classes([])
 def update_property(request, pk):
