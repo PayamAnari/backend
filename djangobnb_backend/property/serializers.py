@@ -36,6 +36,7 @@ class PropertiesDetailSerializer(serializers.ModelSerializer):
             "guests",
             "landlord",
             "country",
+            "category"
         )
 
 
@@ -43,7 +44,7 @@ class ReservationListSerializer(serializers.ModelSerializer):
     property = PropertiesListSerializer(read_only=True, many=False)
     price_per_night = serializers.FloatField(
         source="property.price_per_night", read_only=True
-    )  # Add this line
+    )  
 
     class Meta:
         model = Reservation
