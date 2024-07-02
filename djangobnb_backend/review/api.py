@@ -6,7 +6,8 @@ from rest_framework.decorators import (
 )
 from .models import Review
 from .serializer import ReviewSerializer
-from .forms import ReviewForm
+from .form import ReviewForm
+from property.models import Property
 
 
 @api_view(["GET"])
@@ -30,14 +31,21 @@ def get_reviews(request, property_id):
 
 
 @api_view(["POST"])
-def create_review(request):
+@permission_classes([])
+@authentication_classes([])
+def create_review(request, property_id):
+    try:
+        property = Property.objects.get(id=property_id)
+    except Property.DoesNotExist:
+        return JsonResponse({"error": "Property not found"}, status=404)
+
     form = ReviewForm(request.POST)
     if form.is_valid():
         review = form.save(commit=False)
-        review.landlord = request.user
+        review.property = property
+        review.user = request.user
         review.save()
 
-        return JsonResponse({"success": True})
+        return JsonResponse({"success": True}, status=201)
     else:
-        print("error", form.errors, form.non_field_errors)
         return JsonResponse({"errors": form.errors.as_json()}, status=400)
