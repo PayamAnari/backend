@@ -8,6 +8,7 @@ from .models import Review
 from .serializer import ReviewSerializer
 from .form import ReviewForm
 from property.models import Property
+from rest_framework.parsers import JSONParser
 
 
 @api_view(["GET"])
@@ -20,8 +21,6 @@ def get_reviews(request, property_id):
 
 
 @api_view(["POST"])
-@permission_classes([])
-@authentication_classes([])
 def create_review(request, property_id):
     try:
         property = Property.objects.get(id=property_id)
