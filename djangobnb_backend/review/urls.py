@@ -3,5 +3,5 @@ from . import api
 
 
 urlpatterns = [
-    path("", api.get_reviews, name="api_get_reviews"),
+    path("<uuid:property_id>/reviews/", api.get_reviews, name="api_get_reviews"),
 ]

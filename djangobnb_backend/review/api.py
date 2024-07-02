@@ -5,13 +5,13 @@ from rest_framework.decorators import (
     authentication_classes,
 )
 from .models import Review
-from .serializers import ReviewSerializer
+from .serializer import ReviewSerializer
 
 
 @api_view(["GET"])
 @permission_classes([])
 @authentication_classes([])
-def get_reviews(request):
-    serializer = ReviewSerializer(Review.objects.all(), many=True)
-
+def get_reviews(request, property_id):
+    reviews = Review.objects.filter(property_id=property_id)
+    serializer = ReviewSerializer(reviews, many=True)
     return JsonResponse(serializer.data, safe=False)
