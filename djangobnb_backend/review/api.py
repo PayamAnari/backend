@@ -19,17 +19,6 @@ def get_reviews(request, property_id):
     return JsonResponse(serializer.data, safe=False)
 
 
-# @api_view(["POST"])
-# @permission_classes([])
-# @authentication_classes([])
-# def create_review(request.POST):
-#     serializer = ReviewSerializer(data=request.data)
-#     if serializer.is_valid():
-#         serializer.save()
-#         return JsonResponse(serializer.data, safe=False)
-#     return JsonResponse(serializer.errors, status=400)
-
-
 @api_view(["POST"])
 @permission_classes([])
 @authentication_classes([])
