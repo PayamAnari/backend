@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 
-from .models import Property, Review
+from .models import Property
 
 
 class PropertyForm(ModelForm):
@@ -17,13 +17,4 @@ class PropertyForm(ModelForm):
             "country_code",
             "category",
             "image",
-        )
-
-
-class ReviewForm(ModelForm):
-    class Meta:
-        model = Review
-        fields = (
-            "rating",
-            "comment",
         )

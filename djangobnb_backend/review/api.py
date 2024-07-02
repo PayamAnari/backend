@@ -6,6 +6,7 @@ from rest_framework.decorators import (
 )
 from .models import Review
 from .serializer import ReviewSerializer
+from .forms import ReviewForm
 
 
 @api_view(["GET"])
@@ -17,24 +18,24 @@ def get_reviews(request, property_id):
     return JsonResponse(serializer.data, safe=False)
 
 
-@api_view(["POST"])
-@permission_classes([])
-@authentication_classes([])
-def create_review(request.POST):
-    serializer = ReviewSerializer(data=request.data)
-    if serializer.is_valid():
-        serializer.save()
-        return JsonResponse(serializer.data, safe=False)
-    return JsonResponse(serializer.errors, status=400)
+# @api_view(["POST"])
+# @permission_classes([])
+# @authentication_classes([])
+# def create_review(request.POST):
+#     serializer = ReviewSerializer(data=request.data)
+#     if serializer.is_valid():
+#         serializer.save()
+#         return JsonResponse(serializer.data, safe=False)
+#     return JsonResponse(serializer.errors, status=400)
 
 
 @api_view(["POST"])
-def create_property(request):
-    form = PropertyForm(request.POST, request.FILES)
+def create_review(request):
+    form = ReviewForm(request.POST)
     if form.is_valid():
-        property = form.save(commit=False)
-        property.landlord = request.user
-        property.save()
+        review = form.save(commit=False)
+        review.landlord = request.user
+        review.save()
 
         return JsonResponse({"success": True})
     else:
