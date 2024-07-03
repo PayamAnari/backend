@@ -8,6 +8,7 @@ from .models import Review
 from .serializer import ReviewSerializer
 from .form import ReviewForm
 from property.models import Property
+from django.db.models import Avg
 
 
 @api_view(["GET"])
@@ -20,7 +21,7 @@ def get_reviews(request, property_id):
     average_rating = reviews.aggregate(Avg("rating"))["rating__avg"]
     response_data = {"reviews": serializer.data, "average_rating": average_rating}
 
-    return JsonResponse(serializer.data, safe=False)
+    return JsonResponse(response_data, safe=False)
 
 
 @api_view(["POST"])
