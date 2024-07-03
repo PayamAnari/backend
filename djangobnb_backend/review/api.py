@@ -39,7 +39,8 @@ def create_review(request, property_id):
         review.user = request.user
         review.save()
 
-        return JsonResponse({"success": True}, status=201)
+        serializer = ReviewSerializer(review)
+        return JsonResponse(serializer.data, status=201)
     else:
         return JsonResponse({"errors": form.errors.as_json()}, status=400)
 
