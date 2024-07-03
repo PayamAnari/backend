@@ -8,7 +8,6 @@ from .models import Review
 from .serializer import ReviewSerializer
 from .form import ReviewForm
 from property.models import Property
-from rest_framework.parsers import JSONParser
 
 
 @api_view(["GET"])
@@ -17,6 +16,10 @@ from rest_framework.parsers import JSONParser
 def get_reviews(request, property_id):
     reviews = Review.objects.filter(property_id=property_id)
     serializer = ReviewSerializer(reviews, many=True)
+
+    average_rating = reviews.aggregate(Avg("rating"))["rating__avg"]
+    response_data = {"reviews": serializer.data, "average_rating": average_rating}
+
     return JsonResponse(serializer.data, safe=False)
 
 
