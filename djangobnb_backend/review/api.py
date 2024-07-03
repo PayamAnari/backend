@@ -19,6 +19,9 @@ def get_reviews(request, property_id):
     serializer = ReviewSerializer(reviews, many=True)
 
     average_rating = reviews.aggregate(Avg("rating"))["rating__avg"]
+    if average_rating is not None:
+        average_rating = format(average_rating, ".2f")
+
     response_data = {"reviews": serializer.data, "average_rating": average_rating}
 
     return JsonResponse(response_data, safe=False)
