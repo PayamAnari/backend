@@ -37,3 +37,14 @@ def create_review(request, property_id):
         return JsonResponse({"success": True}, status=201)
     else:
         return JsonResponse({"errors": form.errors.as_json()}, status=400)
+
+
+@api_view(["DELETE"])
+def delete_review(request, review_id):
+    try:
+        review = Review.objects.get(id=review_id)
+    except Review.DoesNotExist:
+        return JsonResponse({"error": "Review not found"}, status=404)
+
+    review.delete()
+    return JsonResponse({"success": True}, status=200)
