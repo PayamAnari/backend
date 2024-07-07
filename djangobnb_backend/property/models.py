@@ -16,6 +16,8 @@ class Property(models.Model):
     guests = models.IntegerField()
     country = models.CharField(max_length=255)
     country_code = models.CharField(max_length=10)
+    city = models.CharField(max_length=255)
+    bed = models.IntegerField()
     category = models.CharField(max_length=255)
     favorited = models.ManyToManyField(User, related_name="favorites", blank=True)
     image = models.ImageField(upload_to="uploads/properties")

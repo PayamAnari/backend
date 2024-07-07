@@ -6,6 +6,7 @@ from useraccount.serializers import UserDetailSerializer
 class PropertiesListSerializer(serializers.ModelSerializer):
     created_at = serializers.DateTimeField(read_only=True)
     landlord = UserDetailSerializer(read_only=True, many=False)
+    city = serializers.CharField(max_length=255)
 
     class Meta:
         model = Property
@@ -17,11 +18,14 @@ class PropertiesListSerializer(serializers.ModelSerializer):
             "landlord",
             "created_at",
             "country",
+            "city",
         )
 
 
 class PropertiesDetailSerializer(serializers.ModelSerializer):
     landlord = UserDetailSerializer(read_only=True, many=False)
+    city = serializers.CharField(max_length=255)
+    bed = serializers.IntegerField()
 
     class Meta:
         model = Property
@@ -33,10 +37,12 @@ class PropertiesDetailSerializer(serializers.ModelSerializer):
             "image_url",
             "bedrooms",
             "bathrooms",
+            "bed",
             "guests",
             "landlord",
             "country",
-            "category"
+            "city",
+            "category",
         )
 
 
@@ -44,7 +50,7 @@ class ReservationListSerializer(serializers.ModelSerializer):
     property = PropertiesListSerializer(read_only=True, many=False)
     price_per_night = serializers.FloatField(
         source="property.price_per_night", read_only=True
-    )  
+    )
 
     class Meta:
         model = Reservation

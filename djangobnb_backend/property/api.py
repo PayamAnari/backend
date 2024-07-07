@@ -40,10 +40,12 @@ def properties_list(request):
     is_favorites = request.GET.get("is_favorites", "")
     landlord_id = request.GET.get("landlord_id", "")
     country = request.GET.get("country", "")
+    city = request.GET.get("city", "")
     category = request.GET.get("category", "")
     checkin_date = request.GET.get("checkIn", "")
     checkout_date = request.GET.get("checkOut", "")
     bedrooms = request.GET.get("numBedrooms", "")
+    bed = request.GET.get("numBed", "")
     bathrooms = request.GET.get("numBathrooms", "")
     guests = request.GET.get("numGuests", "")
 
@@ -73,11 +75,17 @@ def properties_list(request):
     if bedrooms:
         properties = properties.filter(bedrooms__gte=bedrooms)
 
+    if bed:
+        properties = properties.filter(beds__gte=bed)
+
     if bathrooms:
         properties = properties.filter(bathrooms__gte=bathrooms)
 
     if country:
         properties = properties.filter(country=country)
+
+    if city:
+        properties = properties.filter(city=city)
 
     if category and category != "undefined":
         properties = properties.filter(category=category)
