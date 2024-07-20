@@ -210,14 +210,17 @@ The User section of PropertyBnB is designed to handle all aspects of user accoun
 **User Registration and Authentication**
 
 - **Registration:** New users can register an account on the platform, providing necessary details like name and email. Upon registration, users can start exploring and interacting with the platform.
-Login/Logout: Users can securely log in and log out of their accounts. The login system uses email and password for authentication, ensuring that only authorized users can access their accounts.
-Token Management: The system uses JWT (JSON Web Tokens) for managing user sessions, allowing users to refresh their tokens to stay logged in without having to re-enter their credentials frequently.
-User Profile Management
+- **Login/Logout:** Users can securely log in and log out of their accounts. The login system uses email and password for authentication, ensuring that only authorized users can access their accounts.
+- **Token Management:** The system uses JWT (JSON Web Tokens) for managing user sessions, allowing users to refresh their tokens to stay logged in without having to re-enter their credentials frequently.
 
-View Profile: Users can view their profile details, including personal information, contact details, and profile picture. This information is displayed in a structured and easy-to-read format.
-Update Profile: Users can update their profile information, including their name, email, telephone, address, birthday, work details, favorite song, and a personal bio. This feature ensures that users can keep their information up-to-date.
-Upload Profile Picture: Users can upload a profile picture, personalizing their account and enhancing their profile visibility. The profile picture can be easily updated or changed.
-Reservation Management
+### User Profile Management
+
+- **View Profile:** Users can view their profile details, including personal information, contact details, and profile picture. This information is displayed in a structured and easy-to-read format.
+- **Update Profile:** Users can update their profile information, including their name, email, telephone, address, birthday, work details, favorite song, and a personal bio. This feature ensures that users can keep their information up-to-date.
+- **Upload Profile Picture:** Users can upload a profile picture, personalizing their account and enhancing their profile
+visibility. The profile picture can be easily updated or changed.
+
+### Reservation Management
 
 View Reservations: Users can view a list of their reservations, allowing them to keep track of their booking history. This list includes detailed information about each reservation.
 Reservation Details: Users can view specific details about individual reservations, providing them with all necessary information about their stays in one place.
