@@ -147,3 +147,13 @@ Security and Configurations
 | *GET* | ```/api/reviews/<uuid:property_id>/reviews/``` | _Retrieve list of all reviews for a specific property_| _All users_|
 | *POST* | ```/api/reviews/<uuid:property_id>/create/``` | _Create a new review for a specific property_|_Authenticated users_|
 | *DELETE* | ```/api/reviews/<uuid:review_id>/delete/``` | _Delete a specific review_|_Authenticated users_|
+
+### Chat
+
+| METHOD | ROUTE | FUNCTIONALITY |ACCESS|
+| ------- | ----- | ------------- | ------------- |
+| *GET* | ```/api/chat/rooms/``` | _Retrieve list of all chat rooms_| _Authenticated users_|
+| *GET* | ```/api/chat/rooms/<uuid:room_id>/``` | _Retrieve details of a specific chat room_|_Authenticated users_|
+| *POST* | ```/api/chat/rooms/create/``` | _Create a new chat room_|_Authenticated users_|
+| *POST* | ```/api/chat/messages/`` | _Send a message to a chat room_|_Authenticated users_|
+| *GET*  | ```/api/chat/messages/<uuid:room_id>/``` | _Retrieve list of all messages in a specific chat room_ |_Authenticated users_|
