@@ -46,3 +46,16 @@ DjangoAirbnb is a robust backend application designed to power a platform simila
 - User Reviews: Allows users to leave reviews for properties, enhancing trust and credibility.
 Security and Configurations
 
+5. **Payment Integration**
+
+- Stripe Integration: Secure payment processing for reservations using Stripe.
+
+6. **Security**
+
+- Content Security Policy (CSP): Ensures protection against cross-site scripting (XSS) and data injection attacks.
+- Secure Authentication: Uses robust authentication mechanisms to protect user data and sessions.
+
+---
+
+## Technologies Used
+
