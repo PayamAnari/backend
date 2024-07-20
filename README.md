@@ -208,9 +208,12 @@ docker-compose exec web python manage.py migrate
 
 ```
 Open your web browser and go to http://localhost:3000 to access the application.
-
-
 ```
 
+6- **Admin Panel**
 
+Access the Django admin panel at http://localhost:8000/admin to manage users, properties, and reviews.
+
+
+---
 
