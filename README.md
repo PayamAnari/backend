@@ -175,3 +175,17 @@ cd backend
 ```
 
 2- **Environment Setup:** Create a .env.dev file in the root directory with the following variables:
+
+Make file
+```
+SECRET_KEY=your_secret_key
+DEBUG=1
+DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+SQL_ENGINE=django.db.backends.postgresql
+SQL_DATABASE=airbnb
+SQL_USER=postgres
+SQL_PASSWORD=postgres
+SQL_HOST=db
+SQL_PORT=5432
+STRIPE_SECRET_KEY=your_stripe_secret_key
+```
