@@ -189,3 +189,10 @@ SQL_HOST=db
 SQL_PORT=5432
 STRIPE_SECRET_KEY=your_stripe_secret_key
 ```
+
+3- **Build and Run Docker Containers:**
+
+```
+docker-compose up --build
+
+```
