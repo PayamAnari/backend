@@ -196,3 +196,12 @@ STRIPE_SECRET_KEY=your_stripe_secret_key
 docker-compose up --build
 
 ```
+
+4- **Run Migrations:**
+
+```
+docker-compose exec web python manage.py makemigrations
+docker-compose exec web python manage.py migrate
+```
+
+
