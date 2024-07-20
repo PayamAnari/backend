@@ -174,3 +174,4 @@ git clone https://github.com/PayamAnari/backend.git
 cd backend
 ```
 
+2- **Environment Setup:** Create a .env.dev file in the root directory with the following variables:
