@@ -65,13 +65,15 @@ Security and Configurations
 
 ## Technologies Used
 
+### Backend
+
 - **Django:** A high-level Python web framework that encourages rapid development and clean, pragmatic design.
 - **Django REST Framework (DRF):** A powerful and flexible toolkit for building Web APIs in Django.
 - **Django Channels:** Extends Django to handle WebSockets, enabling real-time support in the application.
-PostgreSQL: A powerful, open source object-relational database system.
-Daphne: A HTTP, HTTP2, and WebSocket protocol server for ASGI and ASGI-HTTP, used to serve Django Channels applications.
-psycopg2: A PostgreSQL adapter for Python, used to connect Django with PostgreSQL.
-Stripe API: Integration for handling secure payment processing.
+- **PostgreSQL:** A powerful, open source object-relational database system.
+- **Daphne:** A HTTP, HTTP2, and WebSocket protocol server for ASGI and ASGI-HTTP, used to serve Django Channels applications.
+- **psycopg2:** A PostgreSQL adapter for Python, used to connect Django with PostgreSQL.
+- **Stripe API:** Integration for handling secure payment processing.
 Authentication and Authorization
 Django Allauth: Integrated set of Django applications addressing authentication, registration, account management, and third-party (social) account authentication.
 Django Rest Auth: Provides a set of REST API endpoints for user registration, login/logout, password change/reset, social auth, and more.
