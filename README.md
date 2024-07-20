@@ -260,13 +260,15 @@ The Review section of PropertyBnB provides users with the ability to leave feedb
 
 **Create, Read, Delete (CRD) Operations**
 
-Create Review: Users can submit reviews for properties they have stayed at, sharing their experiences and rating the property on a scale. This helps other potential renters make informed decisions based on past experiences.
-View Reviews: Potential renters can view reviews left by other users for a specific property. Reviews include ratings, comments, and details about the reviewer, providing a comprehensive understanding of the property’s quality.
-Delete Review: Users can delete their reviews if they wish to remove their feedback. This ensures users have control over the content they contribute to the platform.
-Average Rating Calculation
+- **Create Review:** Users can submit reviews for properties they have stayed at, sharing their experiences and rating the property on a scale. This helps other potential renters make informed decisions based on past experiences.
+- **View Reviews:** Potential renters can view reviews left by other users for a specific property. Reviews include ratings, comments, and details about the reviewer, providing a comprehensive understanding of the property’s quality.
+- **Delete Review:** Users can delete their reviews if they wish to remove their feedback. This ensures users have control over the content they contribute to the platform.
 
-Average Rating: The system calculates the average rating for each property based on user reviews. This average rating is displayed alongside the reviews, giving potential renters a quick overview of the property’s overall rating.
-Detailed Review Information
+### Average Rating Calculation
+
+- **Average Rating:** The system calculates the average rating for each property based on user reviews. This average rating is displayed alongside the reviews, giving potential renters a quick overview of the property’s overall rating.
+
+### Detailed Review Information
 
 Review Details: Each review includes detailed information such as the rating, comment, user who submitted the review, and timestamps for when the review was created and last updated.
 User Information: Reviews display details about the reviewer, helping to build trust and transparency in the feedback provided.
