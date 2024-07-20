@@ -74,14 +74,12 @@ Security and Configurations
 - **Daphne:** A HTTP, HTTP2, and WebSocket protocol server for ASGI and ASGI-HTTP, used to serve Django Channels applications.
 - **psycopg2:** A PostgreSQL adapter for Python, used to connect Django with PostgreSQL.
 - **Stripe API:** Integration for handling secure payment processing.
-Authentication and Authorization
-Django Allauth: Integrated set of Django applications addressing authentication, registration, account management, and third-party (social) account authentication.
-Django Rest Auth: Provides a set of REST API endpoints for user registration, login/logout, password change/reset, social auth, and more.
-Django Rest Framework SimpleJWT: A JSON Web Token authentication backend for the Django REST Framework.
-Frontend
-HTML/CSS: Standard markup and styling languages for creating web pages.
-JavaScript: For enhancing the interactivity of the web application.
-WebSockets: For enabling real-time, two-way interactive communication between the user's browser and the server.
+
+### Authentication and Authorization
+- **Django Allauth:** Integrated set of Django applications addressing authentication, registration, account management, and third-party (social) account authentication.
+- **Django Rest Auth:** Provides a set of REST API endpoints for user registration, login/logout, password change/reset, social auth, and more.
+- **Django Rest Framework SimpleJWT:** A JSON Web Token authentication backend for the Django REST Framework.
+- **WebSockets:** For enabling real-time, two-way interactive communication between the user's browser and the server.
 Security
 Content Security Policy (CSP): A security feature that helps to prevent various attacks including Cross-Site Scripting (XSS) and data injection attacks.
 JSON Web Tokens (JWT): For secure user authentication and session management.
