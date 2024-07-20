@@ -303,24 +303,30 @@ The Chat section of PropertyBnB is designed to facilitate real-time communicatio
 - **Live Chat:** Users can engage in real-time conversations with others through WebSocket connections. This feature ensures instant messaging and dynamic interaction, providing a responsive and interactive user experience.
 - **Conversation Creation:** Users can start new conversations with other platform members or retrieve existing chat threads, allowing for both new and ongoing discussions.
 - **Message Notifications:** Real-time notifications for incoming messages ensure that users are promptly informed of new interactions, enhancing responsiveness and engagement.
-Conversation Management
-View Conversations: Users can view a list of their active and past conversations. This overview includes essential details such as participants and timestamps, helping users keep track of their interactions.
-Conversation Details: Users can access specific conversations to view message history and other relevant details, allowing for a comprehensive understanding of the context and content of their discussions.
-Message Handling
-Send and Receive Messages: Users can send and receive messages within their conversations. The messaging system supports text-based communication and ensures that messages are delivered and displayed in real time.
-Message Storage: Messages are stored in the database, ensuring that users can access their chat history even after their WebSocket connection is closed. This feature provides continuity and reference for past interactions.
-Administrative Controls
-Manage Conversations: Users have the ability to manage their conversations, including starting new chats and accessing previous ones. This control ensures that users can effectively organize and review their communication history.
-Delete Conversations: Users can delete specific conversations if desired, allowing for the removal of outdated or unnecessary chat threads and maintaining a clean and relevant chat history.
-User Experience
-Real-Time Interaction: The chat system is designed to offer a seamless real-time interaction experience, making it easy for users to communicate instantly without delays or interruptions.
-Intuitive Interface: The chat interface is user-friendly and straightforward, providing an easy-to-navigate environment for managing conversations and messages.
-Security
-Secure Messaging: All messages are transmitted over secure WebSocket connections, ensuring that user communications are protected from unauthorized access.
-Authentication: The chat system integrates with the platform’s authentication mechanisms to ensure that only authorized users can participate in conversations and access message data.
-Integration with Other Sections
-Profile Integration: The chat system integrates with user profiles, displaying relevant profile information alongside conversations. This integration provides context and enhances the user experience by linking chat interactions with user details.
-Reservation Coordination: The chat feature can be used to coordinate reservations and property-related discussions, streamlining communication related to booking and property management.
+
+### Conversation Management
+- **View Conversations:** Users can view a list of their active and past conversations. This overview includes essential details such as participants and timestamps, helping users keep track of their interactions.
+- **Conversation Details:** Users can access specific conversations to view message history and other relevant details, allowing for a comprehensive understanding of the context and content of their discussions.
+
+### Message Handling
+- **Send and Receive Messages:** Users can send and receive messages within their conversations. The messaging system supports text-based communication and ensures that messages are delivered and displayed in real time.
+- **Message Storage:** Messages are stored in the database, ensuring that users can access their chat history even after their WebSocket connection is closed. This feature provides continuity and reference for past interactions.
+
+### Administrative Controls
+- **Manage Conversations:** Users have the ability to manage their conversations, including starting new chats and accessing previous ones. This control ensures that users can effectively organize and review their communication history.
+- **Delete Conversations:** Users can delete specific conversations if desired, allowing for the removal of outdated or unnecessary chat threads and maintaining a clean and relevant chat history.
+
+### User Experience
+- **Real-Time Interaction:** The chat system is designed to offer a seamless real-time interaction experience, making it easy for users to communicate instantly without delays or interruptions.
+- **Intuitive Interface:** The chat interface is user-friendly and straightforward, providing an easy-to-navigate environment for managing conversations and messages.
+
+### Security
+- **Secure Messaging:** All messages are transmitted over secure WebSocket connections, ensuring that user communications are protected from unauthorized access.
+- **Authentication:** The chat system integrates with the platform’s authentication mechanisms to ensure that only authorized users can participate in conversations and access message data.
+
+### Integration with Other Sections
+- **Profile Integration:** The chat system integrates with user profiles, displaying relevant profile information alongside conversations. This integration provides context and enhances the user experience by linking chat interactions with user details.
+- **Reservation Coordination:** The chat feature can be used to coordinate reservations and property-related discussions, streamlining communication related to booking and property management.
 Enhancing User Interaction
 Community Engagement: By facilitating direct communication between users, the chat section fosters community building and engagement, allowing for more personal and interactive experiences.
 Support and Assistance: The real-time chat feature enables users to seek support and assistance promptly, improving overall customer service and satisfaction.
