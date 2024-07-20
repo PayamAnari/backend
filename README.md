@@ -393,3 +393,12 @@ Access the Django admin panel at http://localhost:8000/admin to manage users, pr
 
 ---
 
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+---
+### Built with ❤️ by Payam Anari
+
+Thank you for exploring the Gym Fitness app! If you have any questions, feedback, or just want to say hi, feel free to [reach out](mailto:anari.p62@gmail.com). Happy fitness journey!
+
+---
