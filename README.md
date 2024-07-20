@@ -80,13 +80,15 @@ Security and Configurations
 - **Django Rest Auth:** Provides a set of REST API endpoints for user registration, login/logout, password change/reset, social auth, and more.
 - **Django Rest Framework SimpleJWT:** A JSON Web Token authentication backend for the Django REST Framework.
 - **WebSockets:** For enabling real-time, two-way interactive communication between the user's browser and the server.
-Security
-Content Security Policy (CSP): A security feature that helps to prevent various attacks including Cross-Site Scripting (XSS) and data injection attacks.
-JSON Web Tokens (JWT): For secure user authentication and session management.
-DevOps and Deployment
-Docker: A platform for developing, shipping, and running applications inside lightweight containers.
-Docker Compose: A tool for defining and running multi-container Docker applications.
-nginx: (Not mentioned in the code, but often used in deployment) A high-performance web server that can also be used as a reverse proxy, load balancer, mail proxy, and HTTP cache.
+
+### Security
+- **Content Security Policy (CSP):** A security feature that helps to prevent various attacks including Cross-Site Scripting (XSS) and data injection attacks.
+- **JSON Web Tokens (JWT):** For secure user authentication and session management.
+
+### DevOps and Deployment
+- **Docker:** A platform for developing, shipping, and running applications inside lightweight containers.
+- **Docker Compose:** A tool for defining and running multi-container Docker applications.
+
 Middleware
 CORS Headers: Django middleware for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible.
 CSRF Middleware: Protects the application from Cross-Site Request Forgery (CSRF) attacks.
