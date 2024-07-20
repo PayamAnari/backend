@@ -166,4 +166,11 @@ Security and Configurations
 - **Docker:** Ensure Docker is installed on your machine.
 - **Python 3.12:** The app is built using Python 3.12.
 
+### Steps
+
+1- **Clone the Repository:**
+```
+git clone https://github.com/PayamAnari/backend.git
+cd backend
+```
 
