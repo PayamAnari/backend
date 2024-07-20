@@ -270,13 +270,15 @@ The Review section of PropertyBnB provides users with the ability to leave feedb
 
 ### Detailed Review Information
 
-Review Details: Each review includes detailed information such as the rating, comment, user who submitted the review, and timestamps for when the review was created and last updated.
-User Information: Reviews display details about the reviewer, helping to build trust and transparency in the feedback provided.
-User Experience
+- **Review Details:** Each review includes detailed information such as the rating, comment, user who submitted the review, and timestamps for when the review was created and last updated.
+- **User Information:** Reviews display details about the reviewer, helping to build trust and transparency in the feedback provided.
 
-Responsive Design: The review section is designed to be responsive, ensuring a smooth experience on both desktop and mobile devices.
-User-friendly Interface: Intuitive forms and interfaces make it easy for users to submit and manage their reviews, contributing to the community and helping others make informed decisions.
-Administrative Controls
+### User Experience
+
+- **Responsive Design:** The review section is designed to be responsive, ensuring a smooth experience on both desktop and mobile devices.
+- **User-friendly Interface:** Intuitive forms and interfaces make it easy for users to submit and manage their reviews, contributing to the community and helping others make informed decisions.
+
+### Administrative Controls
 
 Moderation: Admins have the ability to moderate reviews, ensuring that all content complies with the platform’s guidelines and maintaining a positive and constructive environment.
 Integration with Property Listings
