@@ -280,14 +280,16 @@ The Review section of PropertyBnB provides users with the ability to leave feedb
 
 ### Administrative Controls
 
-Moderation: Admins have the ability to moderate reviews, ensuring that all content complies with the platform’s guidelines and maintaining a positive and constructive environment.
-Integration with Property Listings
+- **Moderation:** Admins have the ability to moderate reviews, ensuring that all content complies with the platform’s guidelines and maintaining a positive and constructive environment.
 
-Seamless Integration: The review section is seamlessly integrated with property listings, allowing users to view reviews directly on the property detail page. This integration ensures that all relevant information is readily accessible.
-Enhancing Trust and Transparency
+### Integration with Property Listings
 
-Community Feedback: Reviews provide a platform for community feedback, helping to build trust and transparency within the PropertyBnB ecosystem.
-Informed Decisions: By reading reviews and seeing average ratings, potential renters can make more informed decisions, leading to higher satisfaction and fewer surprises.
+- **Seamless Integration:** The review section is seamlessly integrated with property listings, allowing users to view reviews directly on the property detail page. This integration ensures that all relevant information is readily accessible.
+
+### Enhancing Trust and Transparency
+
+- **Community Feedback:*** Reviews provide a platform for community feedback, helping to build trust and transparency within the PropertyBnB ecosystem.
+- **Informed Decisions:** By reading reviews and seeing average ratings, potential renters can make more informed decisions, leading to higher satisfaction and fewer surprises.
 
 ---
 
