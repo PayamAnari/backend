@@ -327,9 +327,10 @@ The Chat section of PropertyBnB is designed to facilitate real-time communicatio
 ### Integration with Other Sections
 - **Profile Integration:** The chat system integrates with user profiles, displaying relevant profile information alongside conversations. This integration provides context and enhances the user experience by linking chat interactions with user details.
 - **Reservation Coordination:** The chat feature can be used to coordinate reservations and property-related discussions, streamlining communication related to booking and property management.
-Enhancing User Interaction
-Community Engagement: By facilitating direct communication between users, the chat section fosters community building and engagement, allowing for more personal and interactive experiences.
-Support and Assistance: The real-time chat feature enables users to seek support and assistance promptly, improving overall customer service and satisfaction.
+
+### Enhancing User Interaction
+- **Community Engagement:** By facilitating direct communication between users, the chat section fosters community building and engagement, allowing for more personal and interactive experiences.
+- **Support and Assistance:** The real-time chat feature enables users to seek support and assistance promptly, improving overall customer service and satisfaction.
 
 ---
 
