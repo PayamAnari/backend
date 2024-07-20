@@ -50,10 +50,16 @@ Security and Configurations
 
 - Stripe Integration: Secure payment processing for reservations using Stripe.
 
-6. **Security**
+6. **Security and Configurations**
 
-- Content Security Policy (CSP): Ensures protection against cross-site scripting (XSS) and data injection attacks.
-- Secure Authentication: Uses robust authentication mechanisms to protect user data and sessions.
+- Environment Variables: Utilizes environment variables for sensitive configurations such as SECRET_KEY, DEBUG, DATABASE credentials, and STRIPE_SECRET_KEY.
+- Content Security Policy (CSP): Implements CSP headers to protect against cross-site scripting (XSS) and other attacks.
+- CORS Configuration: Configured to allow cross-origin requests from specified origins.
+
+7.  **Middleware and Security**
+
+- Django Middleware: Includes essential middleware for security, session management, and cross-origin resource sharing (CORS).
+- CSP Middleware: Enhances security by restricting resource loading to trusted sources.
 
 ---
 
