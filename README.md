@@ -157,3 +157,13 @@ Security and Configurations
 | *POST* | ```/api/chat/rooms/create/``` | _Create a new chat room_|_Authenticated users_|
 | *POST* | ```/api/chat/messages/`` | _Send a message to a chat room_|_Authenticated users_|
 | *GET*  | ```/api/chat/messages/<uuid:room_id>/``` | _Retrieve list of all messages in a specific chat room_ |_Authenticated users_|
+
+---
+
+## Installation
+### Prerequisites
+
+- **Docker:** Ensure Docker is installed on your machine.
+- **Python 3.12:** The app is built using Python 3.12.
+
+
