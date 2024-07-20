@@ -89,9 +89,9 @@ Security and Configurations
 - **Docker:** A platform for developing, shipping, and running applications inside lightweight containers.
 - **Docker Compose:** A tool for defining and running multi-container Docker applications.
 
-Middleware
-CORS Headers: Django middleware for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible.
-CSRF Middleware: Protects the application from Cross-Site Request Forgery (CSRF) attacks.
+### Middleware
+- **CORS Headers:** Django middleware for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible.
+- **CSRF Middleware:** Protects the application from Cross-Site Request Forgery (CSRF) attacks.
 Miscellaneous
 Pillow: A Python Imaging Library (PIL) fork that adds image processing capabilities to your Python interpreter.
 uuid: For generating universally unique identifiers (UUIDs) for user and reservation primary keys.
