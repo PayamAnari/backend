@@ -117,3 +117,14 @@ Security and Configurations
 </p>
 
 ---
+
+## API Endpoints
+### Property
+
+| METHOD | ROUTE | FUNCTIONALITY |ACCESS|
+| ------- | ----- | ------------- | ------------- |
+| *GET* | ```/api/properties/``` | _Retrieve list of all properties_| _All users_|
+| *GET* | ```/api/properties/<uuid:property_id>/``` | _Retrieve details of a specific property_|_All users_|
+| *POST* | ```/api/properties/create/``` | _Create a new property_|_Authenticated users_|
+| *PUT* | ```/api/properties/<uuid:property_id>/update/``` | _Update details of a specific property_|_Authenticated users_|
+| *DELETE*  | ```/api/properties/<uuid:property_id>/delete/``` | _Delete a specific property_ |_Authenticated users_|
