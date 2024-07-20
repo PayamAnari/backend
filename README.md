@@ -201,6 +201,49 @@ Reservation Integration
 
 ---
 
+## User Management
+
+The User section of PropertyBnB is designed to handle all aspects of user account management, including user registration, authentication, profile updates, and reservation management. This section ensures a secure and user-friendly experience, enabling users to manage their accounts and interactions with the platform efficiently.
+
+### Key Features
+
+**User Registration and Authentication**
+
+- **Registration:** New users can register an account on the platform, providing necessary details like name and email. Upon registration, users can start exploring and interacting with the platform.
+Login/Logout: Users can securely log in and log out of their accounts. The login system uses email and password for authentication, ensuring that only authorized users can access their accounts.
+Token Management: The system uses JWT (JSON Web Tokens) for managing user sessions, allowing users to refresh their tokens to stay logged in without having to re-enter their credentials frequently.
+User Profile Management
+
+View Profile: Users can view their profile details, including personal information, contact details, and profile picture. This information is displayed in a structured and easy-to-read format.
+Update Profile: Users can update their profile information, including their name, email, telephone, address, birthday, work details, favorite song, and a personal bio. This feature ensures that users can keep their information up-to-date.
+Upload Profile Picture: Users can upload a profile picture, personalizing their account and enhancing their profile visibility. The profile picture can be easily updated or changed.
+Reservation Management
+
+View Reservations: Users can view a list of their reservations, allowing them to keep track of their booking history. This list includes detailed information about each reservation.
+Reservation Details: Users can view specific details about individual reservations, providing them with all necessary information about their stays in one place.
+Administrative Controls
+
+Update User Information: Admins or users themselves can update their profile information, ensuring data accuracy and relevance.
+Delete Account: Users can delete their accounts if they decide to leave the platform. This feature ensures users have full control over their data and can choose to remove it if necessary.
+User Experience
+
+Responsive Design: The user management section is designed to be responsive, providing a seamless experience across different devices, including desktops, tablets, and smartphones.
+User-friendly Interface: The interface is intuitive and easy to navigate, making it simple for users to manage their accounts and reservations without needing technical assistance.
+Security
+
+Authentication: Secure authentication mechanisms ensure that user data is protected, and only authorized users can access their accounts.
+Permissions: Different permission levels ensure that users can only perform actions they are authorized for, enhancing overall security and integrity of the platform.
+Integration with Other Sections
+
+Seamless Integration: The user management section is integrated with other sections like property listings and reviews, providing a cohesive and interconnected user experience.
+Profile Information in Reviews: User profile information can be displayed alongside their reviews, adding credibility and context to the feedback provided.
+Enhancing Trust and Engagement
+
+Community Building: By allowing users to personalize their profiles and share information, the platform fosters a sense of community and trust among users.
+Informed Decisions: Detailed user profiles and review histories help potential renters make informed decisions based on real user feedback and experiences.
+
+---
+
 ## Installation
 ### Prerequisites
 
