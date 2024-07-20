@@ -140,3 +140,10 @@ Security and Configurations
 | *PUT*  | ```/api/auth/<uuid:pk>/profile/``` | _Update details of a specific user_ |_Authenticated users_|
 | *DELETE*  | ```/api/auth/<uuid:pk>/delete/``` | _Delete a specific user_ |_Authenticated users_|
 
+### Review
+
+| METHOD | ROUTE | FUNCTIONALITY |ACCESS|
+| ------- | ----- | ------------- | ------------- |
+| *GET* | ```/api/reviews/<uuid:property_id>/reviews/``` | _Retrieve list of all reviews for a specific property_| _All users_|
+| *POST* | ```/api/reviews/<uuid:property_id>/create/``` | _Create a new review for a specific property_|_Authenticated users_|
+| *DELETE* | ```/api/reviews/<uuid:review_id>/delete/``` | _Delete a specific review_|_Authenticated users_|
