@@ -227,13 +227,15 @@ visibility. The profile picture can be easily updated or changed.
 
 ### Administrative Controls
 
-Update User Information: Admins or users themselves can update their profile information, ensuring data accuracy and relevance.
-Delete Account: Users can delete their accounts if they decide to leave the platform. This feature ensures users have full control over their data and can choose to remove it if necessary.
-User Experience
+- **Update User Information:** Admins or users themselves can update their profile information, ensuring data accuracy and relevance.
+- **Delete Account:** Users can delete their accounts if they decide to leave the platform. This feature ensures users have full control over their data and can choose to remove it if necessary.
 
-Responsive Design: The user management section is designed to be responsive, providing a seamless experience across different devices, including desktops, tablets, and smartphones.
-User-friendly Interface: The interface is intuitive and easy to navigate, making it simple for users to manage their accounts and reservations without needing technical assistance.
-Security
+### User Experience
+
+- **Responsive Design:** The user management section is designed to be responsive, providing a seamless experience across different devices, including desktops, tablets, and smartphones.
+- **User-friendly Interface:** The interface is intuitive and easy to navigate, making it simple for users to manage their accounts and reservations without needing technical assistance.
+
+### Security
 
 Authentication: Secure authentication mechanisms ensure that user data is protected, and only authorized users can access their accounts.
 Permissions: Different permission levels ensure that users can only perform actions they are authorized for, enhancing overall security and integrity of the platform.
