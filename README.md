@@ -252,6 +252,42 @@ visibility. The profile picture can be easily updated or changed.
 
 ---
 
+## Review Management
+
+The Review section of PropertyBnB provides users with the ability to leave feedback on properties, enhancing the overall user experience by offering insights into property quality and user satisfaction. This section includes functionalities for creating, viewing, and deleting reviews, as well as calculating average ratings for properties.
+
+### Key Features
+
+**Create, Read, Delete (CRD) Operations**
+
+Create Review: Users can submit reviews for properties they have stayed at, sharing their experiences and rating the property on a scale. This helps other potential renters make informed decisions based on past experiences.
+View Reviews: Potential renters can view reviews left by other users for a specific property. Reviews include ratings, comments, and details about the reviewer, providing a comprehensive understanding of the property’s quality.
+Delete Review: Users can delete their reviews if they wish to remove their feedback. This ensures users have control over the content they contribute to the platform.
+Average Rating Calculation
+
+Average Rating: The system calculates the average rating for each property based on user reviews. This average rating is displayed alongside the reviews, giving potential renters a quick overview of the property’s overall rating.
+Detailed Review Information
+
+Review Details: Each review includes detailed information such as the rating, comment, user who submitted the review, and timestamps for when the review was created and last updated.
+User Information: Reviews display details about the reviewer, helping to build trust and transparency in the feedback provided.
+User Experience
+
+Responsive Design: The review section is designed to be responsive, ensuring a smooth experience on both desktop and mobile devices.
+User-friendly Interface: Intuitive forms and interfaces make it easy for users to submit and manage their reviews, contributing to the community and helping others make informed decisions.
+Administrative Controls
+
+Moderation: Admins have the ability to moderate reviews, ensuring that all content complies with the platform’s guidelines and maintaining a positive and constructive environment.
+Integration with Property Listings
+
+Seamless Integration: The review section is seamlessly integrated with property listings, allowing users to view reviews directly on the property detail page. This integration ensures that all relevant information is readily accessible.
+Enhancing Trust and Transparency
+
+Community Feedback: Reviews provide a platform for community feedback, helping to build trust and transparency within the PropertyBnB ecosystem.
+Informed Decisions: By reading reviews and seeing average ratings, potential renters can make more informed decisions, leading to higher satisfaction and fewer surprises.
+
+---
+
+
 ## Installation
 ### Prerequisites
 
