@@ -92,9 +92,11 @@ Security and Configurations
 ### Middleware
 - **CORS Headers:** Django middleware for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible.
 - **CSRF Middleware:** Protects the application from Cross-Site Request Forgery (CSRF) attacks.
-Miscellaneous
-Pillow: A Python Imaging Library (PIL) fork that adds image processing capabilities to your Python interpreter.
-uuid: For generating universally unique identifiers (UUIDs) for user and reservation primary keys.
-Project Management
-Git: Version control system for tracking changes in the source code during software development.
-GitHub: Hosting service for version control using Git, facilitating collaboration and project management.
+
+### Miscellaneous
+- **Pillow:** A Python Imaging Library (PIL) fork that adds image processing capabilities to your Python interpreter.
+- **uuid:** For generating universally unique identifiers (UUIDs) for user and reservation primary keys.
+
+### Project Management
+- **Git:** Version control system for tracking changes in the source code during software development.
+- **GitHub:** Hosting service for version control using Git, facilitating collaboration and project management.
