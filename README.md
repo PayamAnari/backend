@@ -222,9 +222,10 @@ visibility. The profile picture can be easily updated or changed.
 
 ### Reservation Management
 
-View Reservations: Users can view a list of their reservations, allowing them to keep track of their booking history. This list includes detailed information about each reservation.
-Reservation Details: Users can view specific details about individual reservations, providing them with all necessary information about their stays in one place.
-Administrative Controls
+- **View Reservations:** Users can view a list of their reservations, allowing them to keep track of their booking history. This list includes detailed information about each reservation.
+- **Reservation Details:** Users can view specific details about individual reservations, providing them with all necessary information about their stays in one place.
+
+### Administrative Controls
 
 Update User Information: Admins or users themselves can update their profile information, ensuring data accuracy and relevance.
 Delete Account: Users can delete their accounts if they decide to leave the platform. This feature ensures users have full control over their data and can choose to remove it if necessary.
