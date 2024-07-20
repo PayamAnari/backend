@@ -128,3 +128,15 @@ Security and Configurations
 | *POST* | ```/api/properties/create/``` | _Create a new property_|_Authenticated users_|
 | *PUT* | ```/api/properties/<uuid:property_id>/update/``` | _Update details of a specific property_|_Authenticated users_|
 | *DELETE*  | ```/api/properties/<uuid:property_id>/delete/``` | _Delete a specific property_ |_Authenticated users_|
+
+### User
+
+| METHOD | ROUTE | FUNCTIONALITY |ACCESS|
+| ------- | ----- | ------------- | ------------- |
+| *GET* | ```/api/auth/<uuid:pk>/``` | _Retrieve details of a specific user (landlord)_| _All users_|
+| *GET* | ```/api/auth/myreservations/``` | _Retrieve list of all reservations for the logged-in user_|_Authenticated users_|
+| *GET* | ```/api/auth/<uuid:pk>/reservation/``` | _Retrieve details of a specific reservation_|_Authenticated users_|
+| *POST* | ```/api/auth/<uuid:pk>/upload-profile/``` | _Upload profile photo for a specific user_|_All users_|
+| *PUT*  | ```/api/auth/<uuid:pk>/profile/``` | _Update details of a specific user_ |_Authenticated users_|
+| *DELETE*  | ```/api/auth/<uuid:pk>/delete/``` | _Delete a specific user_ |_Authenticated users_|
+
