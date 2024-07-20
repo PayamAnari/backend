@@ -100,3 +100,17 @@ Security and Configurations
 ### Project Management
 - **Git:** Version control system for tracking changes in the source code during software development.
 - **GitHub:** Hosting service for version control using Git, facilitating collaboration and project management.
+
+ <p align="left">
+  <img src="https://img.shields.io/badge/django-00008B?style=for-the-badge&logo=django&logoColor=white"/>
+  <img src="https://img.shields.io/badge/django rest framework-acace6?style=for-the-badge&logo=DRF&logoColor=white"/>
+  <img src="https://img.shields.io/badge/postgresql-800000?style=for-the-badge&logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/stripe-85EA2D?style=for-the-badge&logo=stripe&logoColor=white"/>
+  <img src="https://img.shields.io/badge/WebSockets-ffa500?style=for-the-badge&logo=pyjwt&logoColor=white"/>
+  <img src="https://img.shields.io/badge/simplejwt-ff0000?style=for-the-badge&logo=&logoColor=white"/>
+  <img src="https://img.shields.io/badge/daphne-FFC0CB?style=for-the-badge&logo=&logoColor=white"/>
+  <img src="https://img.shields.io/badge/docker-0000FF?style=for-the-badge&logo=docker&logoColor=white"/>
+  <img src="https://img.shields.io/badge/docker compose-4682B4?style=for-the-badge&logo=docker&logoColor=white"/>
+</p>
+
+---
