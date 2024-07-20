@@ -204,4 +204,13 @@ docker-compose exec web python manage.py makemigrations
 docker-compose exec web python manage.py migrate
 ```
 
+5- **Access the Application**
+
+```
+Open your web browser and go to http://localhost:3000 to access the application.
+
+
+```
+
+
 
