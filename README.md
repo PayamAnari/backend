@@ -108,9 +108,12 @@ Security and Configurations
   <img src="https://img.shields.io/badge/stripe-85EA2D?style=for-the-badge&logo=stripe&logoColor=white"/>
   <img src="https://img.shields.io/badge/WebSockets-ffa500?style=for-the-badge&logo=pyjwt&logoColor=white"/>
   <img src="https://img.shields.io/badge/simplejwt-ff0000?style=for-the-badge&logo=&logoColor=white"/>
-  <img src="https://img.shields.io/badge/daphne-FFC0CB?style=for-the-badge&logo=&logoColor=white"/>
+  <img src="https://img.shields.io/badge/daphne-FF7F50?style=for-the-badge&logo=&logoColor=white"/>
   <img src="https://img.shields.io/badge/docker-0000FF?style=for-the-badge&logo=docker&logoColor=white"/>
   <img src="https://img.shields.io/badge/docker compose-4682B4?style=for-the-badge&logo=docker&logoColor=white"/>
+  <img src="https://img.shields.io/badge/git-ffff00?style=for-the-badge&logo=git&logoColor=white"/>
+  <img src="https://img.shields.io/badge/github-bf00ff?style=for-the-badge&logo=github&logoColor=white"/>
+
 </p>
 
 ---
