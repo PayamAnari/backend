@@ -237,16 +237,18 @@ visibility. The profile picture can be easily updated or changed.
 
 ### Security
 
-Authentication: Secure authentication mechanisms ensure that user data is protected, and only authorized users can access their accounts.
-Permissions: Different permission levels ensure that users can only perform actions they are authorized for, enhancing overall security and integrity of the platform.
-Integration with Other Sections
+- **Authentication:** Secure authentication mechanisms ensure that user data is protected, and only authorized users can access their accounts.
+- **Permissions:** Different permission levels ensure that users can only perform actions they are authorized for, enhancing overall security and integrity of the platform.
 
-Seamless Integration: The user management section is integrated with other sections like property listings and reviews, providing a cohesive and interconnected user experience.
-Profile Information in Reviews: User profile information can be displayed alongside their reviews, adding credibility and context to the feedback provided.
-Enhancing Trust and Engagement
+### Integration with Other Sections
 
-Community Building: By allowing users to personalize their profiles and share information, the platform fosters a sense of community and trust among users.
-Informed Decisions: Detailed user profiles and review histories help potential renters make informed decisions based on real user feedback and experiences.
+- **Seamless Integration:** The user management section is integrated with other sections like property listings and reviews, providing a cohesive and interconnected user experience.
+- **Profile Information in Reviews:** User profile information can be displayed alongside their reviews, adding credibility and context to the feedback provided.
+
+### Enhancing Trust and Engagement
+
+- **Community Building:** By allowing users to personalize their profiles and share information, the platform fosters a sense of community and trust among users.
+- **Informed Decisions:** Detailed user profiles and review histories help potential renters make informed decisions based on real user feedback and experiences.
 
 ---
 
