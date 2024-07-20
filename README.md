@@ -27,22 +27,22 @@ DjangoAirbnb is a robust backend application designed to power a platform simila
 
 1. **Property Listings**
 
-Create, Read, Update, Delete (CRUD) Operations: Allows users to manage property listings with ease.
-Media Management: Efficiently handles images and other media files associated with properties.
+- Create, Read, Update, Delete (CRUD) Operations: Allows users to manage property listings with ease.
+- Media Management: Efficiently handles images and other media files associated with properties.
 
 2. **User Authentication and Authorization**
 
-Custom User Model: Utilizes a custom user model (useraccount.User) to support email-based authentication.
-JWT Authentication: Implements JSON Web Token (JWT) for secure user authentication.
-Django Allauth: Integrates with Django Allauth for robust user registration and authentication workflows.
+- Custom User Model: Utilizes a custom user model (useraccount.User) to support email-based authentication.
+- JWT Authentication: Implements JSON Web Token (JWT) for secure user authentication.
+- Django Allauth: Integrates with Django Allauth for robust user registration and authentication workflows.
 
 3. **Real-time Chat**
 
-WebSocket Support: Leverages Django Channels to provide real-time chat functionality between users.
-Token Authentication Middleware: Ensures secure WebSocket connections using token authentication.
+- WebSocket Support: Leverages Django Channels to provide real-time chat functionality between users.
+- Token Authentication Middleware: Ensures secure WebSocket connections using token authentication.
 
 4. **Review Management**
 
-User Reviews: Allows users to leave reviews for properties, enhancing trust and credibility.
+- User Reviews: Allows users to leave reviews for properties, enhancing trust and credibility.
 Security and Configurations
 
