@@ -174,29 +174,30 @@ The Property section of PropertyBnB provides comprehensive tools for managing pr
 - **View Properties:** Users can browse through available properties, with detailed information presented for each listing.
 Detailed Property Information
 
-Property Details: Each property listing includes a comprehensive set of details, such as the number of bedrooms, bathrooms, guest capacity, and amenities.
-Location Information: Listings include location details like country, city, and specific address, helping users find properties in their desired areas.
-Categorization: Properties can be categorized by type, such as apartments, houses, or villas, allowing users to filter based on their preferences.
+- **Property Details:** Each property listing includes a comprehensive set of details, such as the number of bedrooms, bathrooms, guest capacity, and amenities.
+- **Location Information:** Listings include location details like country, city, and specific address, helping users find properties in their desired areas.
+- **Categorization:** Properties can be categorized by type, such as apartments, houses, or villas, allowing users to filter based on their preferences.
 Media Handling
 
-Image Uploads: Property owners can upload images to showcase their properties, enhancing the visual appeal and providing potential renters with a clear view of the property.
-Image Management: Easy management of property images, including updating and removing outdated pictures.
+- **Image Uploads:** Property owners can upload images to showcase their properties, enhancing the visual appeal and providing potential renters with a clear view of the property.
+- **Image Management:** Easy management of property images, including updating and removing outdated pictures.
 Favorites
 
-Favorite Properties: Users can mark properties as favorites, making it easier to find and revisit preferred listings.
-Favorite Management: Simple toggle functionality to add or remove properties from a user's favorites list.
+- **Favorite Properties:** Users can mark properties as favorites, making it easier to find and revisit preferred listings.
+- **Favorite Management:** Simple toggle functionality to add or remove properties from a user's favorites list.
 Property Filtering and Search
 
-Advanced Search: Users can search for properties based on various criteria such as location, price, number of bedrooms, and availability dates.
-Filter by Attributes: Properties can be filtered by specific attributes like number of guests, amenities, and category, helping users find properties that meet their exact needs.
+- **Advanced Search:** Users can search for properties based on various criteria such as location, price, number of bedrooms, and availability dates.
+- **Filter by Attributes:** Properties can be filtered by specific attributes like number of guests, amenities, and category, helping users find properties that meet their exact needs.
 Reservation Integration
 
-Availability Checking: Automatically check property availability based on existing reservations to prevent double bookings.
-Reservation Management: Integration with the reservation system to display available dates and manage bookings directly from the property listing.
-User Experience
+- **Availability Checking:** Automatically check property availability based on existing reservations to prevent double bookings.
+- **Reservation Management:** Integration with the reservation system to display available dates and manage bookings directly from the property listing.
+  
+### User Experience
 
-Responsive Design: The property section is designed to be responsive, ensuring a smooth browsing experience on both desktop and mobile devices.
-User-friendly Interface: Intuitive interfaces for both property owners and renters, simplifying the process of listing, updating, and searching for properties.
+- **Responsive Design:** The property section is designed to be responsive, ensuring a smooth browsing experience on both desktop and mobile devices.
+- **User-friendly Interface:** Intuitive interfaces for both property owners and renters, simplifying the process of listing, updating, and searching for properties.
 
 ---
 
